@@ -1,7 +1,7 @@
 ## I Introduction
 This script takes in either a single query string or a plain text file containing a lists of query strings(each separated by "\n") and then makes api calls to Crossref API. It retrieves the DOIs for the queried items. With the optional argument "--output", it retrieves and saves the metadata in "bibtex" files.
 
-Either the argument "--query" or "--file" is required. The arguments "--output" and --sleep are optional.
+Either the argument "--query" or "--file" is required. The arguments "--output" and "--sleep" are optional.
 
 If only one query string is provided(Argument: --query), the output file name will be the output file name supplied by the user followed by "_0.bibtex".   
 If a query_list(txt file) is provided, the output files will be named "[user_provided_file_name]_0.bibtex", "[user_provided_file_name]_1.bibtex", etc.

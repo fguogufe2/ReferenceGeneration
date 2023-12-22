@@ -4,7 +4,7 @@ This script takes in either a single query string or a plain text file containin
 
 Either the argument "--query" or "--file" is required. The argument "--output" is optional and --sleep is optional.
 
-If only one query string is provided(Argument: --query), the output file name will be the output file name supplied by the user followed by "_0.bibtex". 
+If only one query string is provided(Argument: --query), the output file name will be the output file name supplied by the user followed by "_0.bibtex".   
 If a query_list(txt file) is provided, the output files will be named "[user_provided_final_name]_0.bibtex", "[user_provided_final_name].bibtex", etc.
 
 The interval between api calls is set to 2 seconds by default. You can put a number after the "--sleep" argument. The unit is second.

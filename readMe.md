@@ -14,9 +14,9 @@ Specific and accurate query strings are essentail to ensure correct DOI retrieva
 
 ## II USAGE:   
 
-`python3 api_calls.py --query queryString --sleep n --output output_file_name`  
+`python api_calls.py --query queryString --sleep n --output output_file_name`  
 
 OR  
 
-`python3 api_calls.py --file query_list.txt --sleep n --output output_file_name`  
+`python api_calls.py --file query_list.txt --sleep n --output output_file_name`  
 

@@ -59,11 +59,9 @@ if __name__ == "__main__":
     start_time = time.time()
 
     if args.query is not None:
-
         query_s_list = [args.query]
     
     elif args.file is not None:
-
         with open(args.file, "r") as fh:
             query_s_list = fh.readlines()
 

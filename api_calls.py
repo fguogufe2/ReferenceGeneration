@@ -39,14 +39,14 @@ group.add_argument("--query",
 group.add_argument("--file", 
                    metavar= "query_txt_file", 
                    type=str, 
-                   default="data/queryList.txt", 
-                   help="query list")
+                   help="query list file")
 
 parser.add_argument("--sleep", type=int, 
                     default=2, 
                     help="sleep time between api calls")
+
 parser.add_argument("-o", "--output", 
-                    type=str, default="output", 
+                    type=str, 
                     help="output file name")
 
 args = parser.parse_args()
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     if args.query is not None:
         query_s_list = [args.query]
     
-    elif args.file is not None:
+    if args.file is not None:
         with open(args.file, "r") as fh:
             query_s_list = fh.readlines()
 

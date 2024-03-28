@@ -80,8 +80,8 @@ if __name__ == "__main__":
     if args.output is not None:
         n = 0
         for doi_item in doi_list:
-            write_bibtex(api_call_bibtex(doi_item[1]), 
-                         f"{args.output}_{n}.bibtex")
+            write_bibtex(api_call_bibtex(doi_item[1], 
+                                         f"{args.output}_{n}.bibtex"))
             time.sleep(SLEEP_TIME)
             n += 1
 

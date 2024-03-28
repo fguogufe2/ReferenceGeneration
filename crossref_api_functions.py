@@ -52,5 +52,5 @@ def api_call_bibtex(doi):
 
 def write_bibtex(data, file_name):
     """ write the bibtex to a file"""
-    with open(f"{file_name}.bib", "w") as f:
+    with open(file_name, "w") as f:
         f.write(data)

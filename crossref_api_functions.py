@@ -23,7 +23,11 @@ def api_call_doi(entry, row=1):
     if response.status_code == 200:
         # Parse the response to JSON
         data = response.json()
-        result = data['message']['items'][0]['DOI']
+        if len(data['message']['items']) == 0:
+            print(f"No results found for {entry}")
+            result = None
+        else: 
+            result = data['message']['items'][0]['DOI']
         # Process the data as needed (for example, print it)
 #         print(data)
     else:

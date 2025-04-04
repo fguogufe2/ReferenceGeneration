@@ -5,6 +5,7 @@ Crossref API call is free and does not require an API key.
 """
 
 def api_call_doi(entry, row=1):
+    
     # Define the URL for the Crossref API
     url = "http://api.crossref.org/works"
 
@@ -22,14 +23,14 @@ def api_call_doi(entry, row=1):
     if response.status_code == 200:
         # Parse the response to JSON
         data = response.json()
-
+        result = data['message']['items'][0]['DOI']
         # Process the data as needed (for example, print it)
 #         print(data)
     else:
-        data = None
+        result = None
         print(f"Failed to retrieve data: {response.status_code}")
         
-    return (entry, data['message']['items'][0]['DOI'])
+    return (entry, result)
 
 
 def api_call_bibtex(doi):
